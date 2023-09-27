@@ -16,7 +16,7 @@ function Todolist() {
     }, [])
 
     let gettodo = async () => {
-        const todo = await axios.get(`https://todo-s14w.onrender.com/todo/${ids}`, {
+        const todo = await axios.get(`https://todolistbackend-54sh.onrender.com/todo/${ids}`, {
             headers: {
                 Authorization: `${window.localStorage.getItem("token")}`
             }
@@ -46,7 +46,7 @@ function Todolist() {
         onSubmit: async (values) => {
             setpgloading(true)
             values.id = ids
-            const task = await axios.post(`https://todo-s14w.onrender.com/todo`, values, {
+            const task = await axios.post(`https://todolistbackend-54sh.onrender.com/todo`, values, {
                 headers: {
                     Authorization: `${window.localStorage.getItem("token")}`
                 }
@@ -65,7 +65,7 @@ function Todolist() {
             const confirm = window.confirm("Are u sure?")
             if (confirm) {
 
-                await axios.delete(`https://todo-s14w.onrender.com/todo/${id}`, {
+                await axios.delete(`https://todolistbackend-54sh.onrender.com/todo/${id}`, {
                     headers: {
                         Authorization: `${window.localStorage.getItem("token")}`
                     }

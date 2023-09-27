@@ -37,7 +37,7 @@ function ChangePassword() {
                 setloading(true)
                 try {
 
-                    const user = await axios.post(`https://todo-s14w.onrender.com/ChangePassword/${params.id}`, values);
+                    const user = await axios.post(`https://todolistbackend-54sh.onrender.com/ChangePassword/${params.id}`, values);
 
                     alert(user.data.message);
                     navigate('/')

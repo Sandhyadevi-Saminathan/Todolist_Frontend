@@ -18,7 +18,7 @@ function Viewtodo() {
     }, [])
     let gettodo = async () => {
         try {
-            const datas = await axios.get(`https://todo-s14w.onrender.com/todos/${params.id}`, {
+            const datas = await axios.get(`https://todolistbackend-54sh.onrender.com/todos/${params.id}`, {
                 headers: {
                     Authorization: `${window.localStorage.getItem("token")}`
                 }

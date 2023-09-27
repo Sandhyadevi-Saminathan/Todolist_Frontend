@@ -19,7 +19,7 @@ function Updateprofile() {
     }, [])
     let getuser = async () => {
         try {
-            const user = await axios.get(`https://todo-s14w.onrender.com/profile/${params.id}`, {
+            const user = await axios.get(`https://todolistbackend-54sh.onrender.com/profile/${params.id}`, {
                 headers: {
                     Authorization: `${window.localStorage.getItem("token")}`
                 }
@@ -62,7 +62,7 @@ function Updateprofile() {
             try {
 
                 setupdating(true)
-                const user = await axios.put(`https://todo-s14w.onrender.com/update/${params.id}`, values, {
+                const user = await axios.put(`https://todolistbackend-54sh.onrender.com/update/${params.id}`, values, {
                     headers: {
                         Authorization: `${window.localStorage.getItem("token")}`
                     }
