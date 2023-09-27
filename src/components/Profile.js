@@ -16,7 +16,7 @@ function Profile() {
     }, [])
     let fetchUsers = async () => {
         try {
-            let userData = await axios.get(`http://localhost:5000/profile/${ids}`, {
+            let userData = await axios.get(`https://todo-s14w.onrender.com/profile/${ids}`, {
                 headers: {
                     Authorization: `${window.localStorage.getItem("token")}`
                 }

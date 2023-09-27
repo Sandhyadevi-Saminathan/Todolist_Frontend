@@ -23,7 +23,7 @@ function Verification() {
         onSubmit: async (values) => {
             setloading(true)
             try {
-                const res = await axios.post(`http://localhost:5000/verification/${params.id}`, values);
+                const res = await axios.post(`https://todo-s14w.onrender.com/verification/${params.id}`, values);
 
 
                 if (res.data) {

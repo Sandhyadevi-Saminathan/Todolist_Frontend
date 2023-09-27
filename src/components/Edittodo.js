@@ -18,7 +18,7 @@ function Edittodo() {
     }, [])
     let gettodo = async () => {
         try {
-            const todo = await axios.get(`http://localhost:5000/todos/${params.id}`, {
+            const todo = await axios.get(`https://todo-s14w.onrender.com/todos/${params.id}`, {
                 headers: {
                     Authorization: `${window.localStorage.getItem("token")}`
                 }
@@ -45,7 +45,7 @@ function Edittodo() {
             try {
 
                 setupdating(true)
-                const user = await axios.put(`http://localhost:5000/todos/${params.id}`, values, {
+                const user = await axios.put(`https://todo-s14w.onrender.com/todos/${params.id}`, values, {
                     headers: {
                         Authorization: `${window.localStorage.getItem("token")}`
                     }

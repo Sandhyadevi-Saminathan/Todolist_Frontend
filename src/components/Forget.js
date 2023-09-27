@@ -13,7 +13,7 @@ function Forget() {
         onSubmit: async (values) => {
             setloading(true)
             try {
-                let userData = await axios.post("http://localhost:5000/mail", values);
+                let userData = await axios.post("https://todo-s14w.onrender.com/mail", values);
 
                 window.localStorage.setItem("my_token", userData.data.token);
                 if (!userData == "") {

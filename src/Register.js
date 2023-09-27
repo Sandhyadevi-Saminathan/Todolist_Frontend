@@ -48,7 +48,7 @@ function Register() {
         onSubmit: async (values) => {
             try {
 
-                let users = await axios.post("http://localhost:5000/register", values);
+                let users = await axios.post("https://todo-s14w.onrender.com/register", values);
                 setuser(users.data)
                 alert("Registered Successfully");
                 formik.resetForm();
